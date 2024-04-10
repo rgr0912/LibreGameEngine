@@ -1,12 +1,17 @@
+#include "Ogre.h"
+#include "OgreApplicationContext.h"
+#include "OgreInput.h"
+#include "OgreRTShaderSystem.h"
 #include <iostream>
 
-class Testing
+class Testing: public OgreBites::ApplicationContext, public OgreBites::InputListener
 {
     public:
     Testing();
-    int miFuncion(int x, int y);
-    void miAnalisis();
+    void setup();
+    void locateResources();
     private:
     int z;
+    Ogre::Root *lgRoot;
 
 };
